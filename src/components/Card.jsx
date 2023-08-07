@@ -34,6 +34,9 @@ padding: 10px;
 color: white;
 font-size: 18px;
 font-weight: 500;
+@media (max-width: 950px){
+font-size: 14px;
+}
 `
 function Card({ img }) {
 

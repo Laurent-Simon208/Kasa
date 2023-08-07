@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 
 const Wrapper = styled.div`
 width: 100%;
+height: auto;
 `;
 
 const Rectangle = styled.div`
@@ -12,7 +13,10 @@ const Rectangle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 30px;
+  @media (max-width: 400px){
+    height: 30px;
+}
 `;
 
 const TitleWrap = styled.div``;
@@ -28,6 +32,10 @@ const ButtonTitle = styled.span`
 const Title = styled.h2`
   font-size: 1.2em;
   margin-left: 10px;
+  @media (max-width: 400px){
+    font-size: 13px;
+    font-weight: 500;
+}
 `;
 
 const Description = styled.div`    
@@ -37,7 +45,7 @@ line-height: 1.5;
 border-Radius: 0 0 10px 10px;
 background-color: #f6f6f6;
 font-size: 1.125rem;
-max-height: ${props => ( props.open ? "100%" : "0")};
+max-height: ${props => (props.open ? "100%" : "0")};
 transition: all 0.7s;
 margin-bottom: 35px;
 div{
@@ -49,14 +57,18 @@ ul {
     padding: 0;
     margin: 0;
   }
+@media (max-width: 400px){
+  margin-bottom: 20px;
+  font-size: 12px;
+}
 `
 
 function Collapse2({ title, description }) {
   const [open, setOpen] = useState(false);
-
+  console.log(open);
   const toggle = () => {
     setOpen(!open);
-    console.log(open);
+
   };
 
   return (
@@ -65,9 +77,9 @@ function Collapse2({ title, description }) {
         <Title>{title}</Title>
         <ButtonTitle onClick={toggle} open={open}>∧</ButtonTitle>
       </Rectangle>
-        <Description open={open} >
-         <div>{description}</div> 
-        </Description>
+      <Description open={open} >
+        <div>{description}</div>
+      </Description>
     </Wrapper>
 
   )

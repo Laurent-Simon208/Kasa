@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import kasaLogo from "../assets/kasaLogo.jpg"
+import kasaLogo from "../../assets/kasaLogo.jpg"
 import { styled } from "styled-components";
 
 const WrapperNav = styled.nav`
@@ -11,7 +11,8 @@ justify-content: space-between;
 align-items: center;
 margin-top: 30px;
 @media (max-width: 400px){
-    width: 100%;
+    width: 95%;
+    margin-bottom: 25px;
 }
 `
 const ImgKasa = styled.img`
@@ -30,9 +31,13 @@ font-size: 24px;
 font-weight: 500;
 text-decoration: none;
 color: #FF6060;
+@media (max-width : 900px){
+    font-size: 18px;
+}
 @media (max-width: 400px){
     font-size: 12px;
     gap: 20px;
+    font-weight: 500;
 }
 `
 const LiHeader = styled.li`

@@ -7,6 +7,11 @@ margin: auto;
 width : 90%;
 height : 415px;
 display : flex;
+@media (max-width: 400px){
+    width: 95%;
+    height: 255px;
+    
+}
 
 `
 const CarouselInner = styled.div`
@@ -16,6 +21,10 @@ const CarouselInner = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  @media (max-width: 400px){
+    border-radius: 15px;
+    height: 255px;
+}
 `;
 
 const Next = styled.span`
@@ -26,7 +35,9 @@ const Next = styled.span`
   position: absolute;
   right: 20px; 
   transform: translateY(-50%); 
-
+  @media (max-width: 400px){
+    font-size: 2em;
+}
 `;
 
 const Prev = styled.span`
@@ -37,6 +48,9 @@ const Prev = styled.span`
   position: absolute;
   left: 20px; 
   transform: translateY(-50%); 
+  @media (max-width: 400px){
+    font-size: 2em;
+}
 `;
 
 const PrevNext = styled.div`
@@ -46,6 +60,9 @@ const PrevNext = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  @media (max-width: 400px){
+    font-size: 1em;
+}
 `;
 
 const Count = styled.span`
@@ -55,6 +72,10 @@ const Count = styled.span`
   bottom: 10px; 
   left: 50%;
   transform: translateX(-50%); 
+  @media (max-width: 400px){
+    display: none;
+    
+  }
 `;
 
 function Carousel({ image }) {

@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import NavHeader from "./NavHeader";
+import NavHeader from "./DescriptionPage/NavHeader";
 import Footer from "./Footer";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
@@ -12,10 +12,16 @@ h1{
   font-size: 200px;
   font-weight: 700;
   margin-bottom: 80px;
+@media (max-width: 400px){
+  font-size: 96px;    
+}
 }
 h2{
   font-size: 32px;
   font-weight: 500;
+@media (max-width: 400px){
+  font-size: 18px;   
+}
 }
 p{
   color : #FF6060;
@@ -23,6 +29,9 @@ p{
   font-weight: 500;
   margin-top: 80px;
   margin-bottom: 80px;
+@media (max-width: 400px){
+  font-size: 14px;   
+}
 }
 `
 

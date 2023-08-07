@@ -11,10 +11,13 @@ const Wrapper = styled.div`
 const WrapperCol = styled.div`
 margin: 30px auto 30px auto;
 width: 75%;
+@media (max-width: 400px){
+width: 95%;
+margin-bottom: 0;
+}
 `
 const CollapseCss = styled.div`
 display:flex;
-
 margin: auto;
 
 `

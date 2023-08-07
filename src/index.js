@@ -5,7 +5,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { useState, useContext } from 'react';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import ErrorPage from './components/ErrorPage';

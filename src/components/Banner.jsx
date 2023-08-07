@@ -44,11 +44,14 @@ align-items: center;
 
 @media (max-width: 400px){
     width: 100%;
-    height: 111px;
+    height: ${props => (props.$currentpage === "About" ? "223px" : "111px")};
     border-radius: 10px;
     margin-top: 30px;
+    display: flex;
+    justify-content: start;
     &::before{
-        border-radius: 10px
+        border-radius: 10px;
+        opacity: 20%;
     }
 }
 `
@@ -63,8 +66,8 @@ line-height: 68px;
 @media (max-width: 400px){
     font-size: 24px;
     line-height: 24px;
-    margin-left: 20px;
-    white-space:pre-wrap;
+    white-space:pre;
+    margin-left: 15px;   
 }
 `
 const WrapperNav = styled.nav`
@@ -97,7 +100,9 @@ font-size: 24px;
 font-weight: 500;
 text-decoration: none;
 color: #FF6060;
-
+@media (max-width : 900px){
+    font-size: 18px;
+}
 @media (max-width: 400px){
     font-size: 12px;
     gap: 20px;
@@ -130,7 +135,7 @@ function Banner() {
             </WrapperNav>
             <Wrapper>
                 <Img $currentpage={currentpage}>
-                    <Title $currentpage={currentpage}>Chez vous, Partout et ailleurs</Title>
+                    <Title $currentpage={currentpage}>Chez vous,{`\n`}Partout et ailleurs</Title>
                 </Img>
             </Wrapper>
 

@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
-import Card from "../components/Card";
+import Card from "../Card";
 import { styled } from "styled-components";
-import { useContext } from "react";
-import logements from "../datas/logements.json";
+import logements from "../../datas/logements.json";
 
 
 const Galery = styled.main`
@@ -33,7 +31,6 @@ margin: 5%;
     width: 95%;
     margin: auto;
     padding: 20px 0 30px 0;
-
 }
 `
 
