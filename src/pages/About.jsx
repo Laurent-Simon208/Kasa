@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
 const WrapperCol = styled.div`
 margin: 30px auto 30px auto;
-width: 75%;
+width: 80%;
 @media (max-width: 400px){
 width: 95%;
 margin-bottom: 0;
@@ -34,23 +34,23 @@ export default function About() {
                 <CollapseCss>
                     <Collapse2
                         title="Fiabilité"
-                        description="Les annonces postées sur Kasa garantissent une fiabilité totale.Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes" />
+                        description="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." />
                 </CollapseCss>
                 <CollapseCss>
 
                     <Collapse2
                         title="Respect"
-                        description="La bienveillance fait partie des valeurs foncdatrices de Kasa. Tout comportements discriminatoire ou de pertubation du voisinage entraînera une exclusion de notre platforme." />
+                        description="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportements discriminatoire ou de pertubation du voisinage entraînera une exclusion de notre platforme." />
                 </CollapseCss>
                 <CollapseCss>
                     <Collapse2
                         title="Service"
-                        description="La bienveillance fait partie des valeurs foncdatrices de Kasa. Tout comportements discriminatoire ou de pertubation du voisinage entraînera une exclusion de notre platforme." />
+                        description="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportements discriminatoire ou de pertubation du voisinage entraînera une exclusion de notre platforme." />
                 </CollapseCss>
                 <CollapseCss>
                     <Collapse2
                         title="Sécurité"
-                        description="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locateire, cela permet à nos équipes de vérifier que les standars sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes" />
+                        description="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locateire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." />
                 </CollapseCss>
             </WrapperCol>
             <Footer />

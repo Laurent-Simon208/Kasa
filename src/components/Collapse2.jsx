@@ -14,6 +14,7 @@ const Rectangle = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 30px;
+  padding: 10px 5px 10px 5px;
   @media (max-width: 400px){
     height: 30px;
 }
@@ -25,7 +26,9 @@ const ButtonTitle = styled.span`
   margin-right: 10px;
   font-size: 1.5em;
   cursor: pointer;
-  transform: rotate(${props => (props.open ? "-180deg" : "0")});
+  display: flex;
+  align-items: center;
+  transform: rotate(${props => (props.open ? "180deg" : "0")});
   transition: transform 0.7s;
 `;
 
@@ -75,7 +78,13 @@ function Collapse2({ title, description }) {
     <Wrapper>
       <Rectangle>
         <Title>{title}</Title>
-        <ButtonTitle onClick={toggle} open={open}>∧</ButtonTitle>
+        <ButtonTitle onClick={toggle} open={open}>
+          <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="arrow_back_ios-24px 2">
+              <path id="Vector" d="M17.2103 21.8522C16.5409 22.5216 15.4538 22.5216 14.7843 21.8522L4.50206 11.5699C3.83265 10.9005 3.83265 9.81335 4.50206 9.14393C5.17148 8.47451 6.25862 8.47451 6.92804 9.14393L16 18.2159L25.072 9.14929C25.7414 8.47987 26.8285 8.47987 27.4979 9.14929C28.1674 9.81871 28.1674 10.9058 27.4979 11.5753L17.2157 21.8575L17.2103 21.8522Z" fill="white" />
+            </g>
+          </svg>
+        </ButtonTitle>
       </Rectangle>
       <Description open={open} >
         <div>{description}</div>

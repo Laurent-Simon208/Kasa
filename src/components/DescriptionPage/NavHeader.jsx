@@ -3,13 +3,14 @@ import kasaLogo from "../../assets/kasaLogo.jpg"
 import { styled } from "styled-components";
 
 const WrapperNav = styled.nav`
-width: 90%;
+width: 100%;
 margin: auto;
 color : #ff6060;
 display: flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 30px;
+margin-bottom: 30px;
 @media (max-width: 400px){
     width: 95%;
     margin-bottom: 25px;

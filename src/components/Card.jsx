@@ -8,7 +8,7 @@ padding-top: 100%;
 background-size: cover;
 background-repeat: no-repeat;
 border-radius: 10px;
-
+cursor: pointer;
 
 &::before{
 content: "";
