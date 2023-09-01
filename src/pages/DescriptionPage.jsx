@@ -20,7 +20,7 @@ width: 45%;
 const WrapCollapse = styled.div`
 display: flex;
 justify-content: space-between;
-width: 100%;
+width: 90%;
 margin: auto;
 @media (max-width: 400px){
     flex-direction: column;

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 const Wrapperr = styled.div`
-width: 100%;
+width: 90%;
 margin: auto;
 font-family: "Montserrat";
 @media (max-width: 400px){

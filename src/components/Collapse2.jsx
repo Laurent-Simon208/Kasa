@@ -68,7 +68,6 @@ ul {
 
 function Collapse2({ title, description }) {
   const [open, setOpen] = useState(false);
-  console.log(open);
   const toggle = () => {
     setOpen(!open);
 

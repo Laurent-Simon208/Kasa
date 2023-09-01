@@ -11,7 +11,7 @@ const WrapperAll = styled.div`
 }
 `
 const Wrapper = styled.aside`
-width: 100%;
+width: 90%;
 margin: auto;
 @media (max-width: 400px){
     width: 100%;
@@ -71,7 +71,7 @@ line-height: 68px;
 }
 `
 const WrapperNav = styled.nav`
-width: 100%;
+width: 90%;
 margin: auto;
 color : #ff6060;
 display: flex;

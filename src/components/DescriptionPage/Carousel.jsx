@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 
 const Wrapper = styled.div`
 margin: auto;
-width : 100%;
+width : 90%;
 height : 415px;
 display : flex;
 @media (max-width: 400px){

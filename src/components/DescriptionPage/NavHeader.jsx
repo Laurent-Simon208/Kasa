@@ -3,7 +3,7 @@ import kasaLogo from "../../assets/kasaLogo.jpg"
 import { styled } from "styled-components";
 
 const WrapperNav = styled.nav`
-width: 100%;
+width: 90%;
 margin: auto;
 color : #ff6060;
 display: flex;

@@ -8,7 +8,7 @@ const Galery = styled.main`
 `
 const Wrapper = styled.article`
 margin: auto;
-width: 100%;
+width: 90%;
 height: 100%;
 margin-top: 50px;
 background-color: #F6F6F6;
