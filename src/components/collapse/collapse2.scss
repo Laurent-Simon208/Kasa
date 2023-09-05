@@ -1,0 +1,86 @@
+@import '../general.scss';
+
+$secondary-color: #f6f6f6;
+$animation-duration: 0.7s;
+
+.wrapper-collapse {
+    width: 100%;
+    height: auto;
+
+    .rectangle {
+        background-color: $primary-color;
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        padding: 10px 5px;
+
+        @media (max-width: $mobile-breakpoint) {
+            height: 10px;
+        }
+
+        .title-collapse {
+            font-size: 1.2em;
+            margin-left: 10px;
+
+            @media (max-width: $mobile-breakpoint) {
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+
+        .button-title {
+            margin-right: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transform: rotate(0);
+            transition: transform $animation-duration;
+
+            &.open {
+                transform: rotate(180deg);
+            }
+
+            @media (max-width: $mobile-breakpoint) {
+                width: 23px;
+            }
+
+
+        }
+    }
+
+    .description-collapse {
+        overflow: hidden;
+        color: $primary-color;
+        line-height: 1.5;
+        border-radius: 0 0 10px 10px;
+        background-color: $secondary-color;
+        font-size: 1.125rem;
+        max-height: 0;
+        transition: all $animation-duration;
+        margin-bottom: 35px;
+
+        div {
+            margin-top: 0;
+            padding: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+
+        &.open {
+            max-height: 100%;
+        }
+    }
+}

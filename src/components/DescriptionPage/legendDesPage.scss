@@ -1,0 +1,189 @@
+@import '../general.scss';
+
+$stars-font-size: 0.9em;
+
+.wrapper-description {
+    display: grid;
+    grid-template-areas:
+        "title host"
+        "tags note";
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+
+    @media (max-width: 700px) {
+        grid-template-areas:
+            "title title"
+            "tags tags"
+            "note host";
+        margin-bottom: 0px;
+    }
+
+    .title {
+        color: $primary-color;
+        grid-area: title;
+
+        h2 {
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        @media (max-width: $intermediaire-breakpoint) {
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+            h2 {
+                font-size: 22px;
+                line-height: 20px;
+                font-weight: 550;
+            }
+
+            h3 {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .tags {
+        display: flex;
+        margin: auto 0;
+        grid-area: tags;
+        align-self: center;
+
+        .tag {
+            background-color: $primary-color;
+            color: white;
+            border-radius: 10px;
+            padding: 5px 30px;
+            margin-right: 10px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        @media (max-width: $intermediaire-breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            gap: 5px;
+
+            .tag {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+            font-size: 10px;
+            height: 14px;
+            margin-bottom: 15px;
+            gap: 5px;
+
+            .tag {
+                background-color: $primary-color;
+                font-size: 10px;
+                color: white;
+                border-radius: 10px;
+                padding: 5px 15px;
+                margin-right: 10px;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .note {
+        font-size: 2.5em;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: flex-end;
+        grid-area: note;
+        align-self: center;
+
+        @media (max-width: $mobile-breakpoint) {
+            font-size: 2.5em;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            justify-content: flex-start;
+            align-self: center;
+        }
+    }
+
+    .host {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+        grid-area: host;
+
+        .host-p {
+            color: $primary-color;
+            font-size: 18px;
+            text-align: end;
+        }
+
+        .host-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            align-self: center;
+
+            .host-p {
+                color: $primary-color;
+                font-size: 12px;
+                text-align: end;
+            }
+
+            .host-img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
+
+
+.red-stars {
+    color: $primary-color;
+    font-size: $stars-font-size;
+
+    @media (max-width: 400px) {
+        font-size: 0.5em;
+    }
+}
+
+.stars {
+    color: #E3E3E3;
+    font-size: $stars-font-size;
+
+    @media (max-width: 400px) {
+        font-size: 0.5em;
+    }
+}

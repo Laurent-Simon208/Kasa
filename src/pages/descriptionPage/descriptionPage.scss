@@ -1,0 +1,27 @@
+@import '../../components/general.scss';
+
+.all-description-page {
+    height: 100%;
+
+    .wrapper-dp-collapse {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        height: 100%;
+
+        @media (max-width: $mobile-breakpoint) {
+            flex-direction: column;
+            width: 95%;
+        }
+
+        .collapse-dp {
+            display: flex;
+            width: 45%;
+
+            @media (max-width: $mobile-breakpoint) {
+                width: 100%;
+            }
+        }
+    }
+}

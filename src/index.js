@@ -5,10 +5,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import HomePage from './pages/HomePage';
-import About from './pages/About';
-import ErrorPage from './components/ErrorPage';
-import DescriptionPage from './pages/DescriptionPage';
+import HomePage from './pages/homePage/HomePage';
+import About from './pages/about/About';
+import ErrorPage from './components/errorPage/ErrorPage';
+import DescriptionPage from './pages/descriptionPage/DescriptionPage';
 
 import { createGlobalStyle } from 'styled-components';
 
@@ -26,24 +26,24 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
-    errorElement: <ErrorPage />,
   },
   {
     path: "/about",
     element: <About />,
-    errorElement: <ErrorPage />
   },
   {
     path: "/descritpion",
     element: <DescriptionPage />,
-    errorElement: <ErrorPage />
   },
   {
     path: "description/:id",
     element: <DescriptionPage />,
-    errorElement: <ErrorPage />
-  }
-
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
+    exact: true,
+  },
 
 
 ])

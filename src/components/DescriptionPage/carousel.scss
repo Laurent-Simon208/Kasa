@@ -1,0 +1,100 @@
+@import '../general.scss';
+$second-color: white;
+$carousel-font-size: 5em;
+$carousel-mobile-font-size: 2em;
+$carousel-border-radius: 25px;
+$carousel-mobile-border-radius: 15px;
+$carousel-height: 415px;
+$carousel-mobile-height: 255px;
+$carousel-count-font-size: 1.2em;
+
+@mixin carousel-button {
+  color: $second-color;
+  font-size: $carousel-font-size;
+  font-weight: 1000;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: $carousel-mobile-font-size;
+  }
+}
+
+@mixin prev-next {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: 400px) {
+    font-size: 1em;
+  }
+}
+
+@mixin carousel-count {
+  color: $second-color;
+  font-size: $carousel-count-font-size;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.wrapper-carousel {
+  margin: auto;
+  width: 90%;
+  height: $carousel-height;
+  display: flex;
+  margin-top: 50px;
+
+  @media (max-width: $mobile-breakpoint) {
+    width: 95%;
+    height: $carousel-mobile-height;
+  }
+
+  .carousel-inner {
+    width: 100%;
+    border-radius: $carousel-border-radius;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @media (max-width: $mobile-breakpoint) {
+      border-radius: $carousel-mobile-border-radius;
+      height: $carousel-mobile-height;
+    }
+
+    .prev-next {
+      @include prev-next;
+
+      @media (max-width: $mobile-breakpoint) {
+        svg {
+          width: 12px;
+        }
+      }
+    }
+
+    .prev {
+      @include carousel-button;
+      left: 20px;
+
+    }
+
+    .next {
+      @include carousel-button;
+      right: 20px;
+    }
+
+    .count {
+      @include carousel-count;
+    }
+  }
+}
