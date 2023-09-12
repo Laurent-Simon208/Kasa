@@ -28,6 +28,10 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
+    path: "/kasa",
+    element: <HomePage />
+  },
+  {
     path: "/about",
     element: <About />,
   },
