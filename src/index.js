@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/kasa",
+    path: "/kasa/",
     element: <HomePage />
   },
   {
